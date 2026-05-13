@@ -1,5 +1,5 @@
 {
-  "name": "ta-nextjs-template",
+  "name": "the-blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -29,5 +29,6 @@
     "prettier-plugin-tailwindcss": "0.8.0",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "description": "Blog project — Next.js 16 course"
 }
