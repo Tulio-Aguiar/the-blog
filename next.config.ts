@@ -1,6 +1,7 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: ['172.20.10.8'],
   reactCompiler: false,
   experimental: {
     turbopackFileSystemCacheForDev: true,
@@ -14,6 +15,6 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
-} satisfies NextConfig
+} satisfies NextConfig;
 
-export default nextConfig
+export default nextConfig;

@@ -1,27 +1,22 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from 'next';
+import './globals.css';
+import { ThemeProvider } from '../contexts/ThemeContext';
 
 export const metadata: Metadata = {
   title: 'Este é um blog com Next.js',
   description: 'Descrição do Site em si.',
-}
+};
 
 type RootLayoutProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="flex min-h-full flex-col">
-        <header>
-          <h1>Este é um blog com Next.js</h1>
-        </header>
-        {children}
-        <footer>
-          <p>Footer</p>
-        </footer>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
